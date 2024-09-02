@@ -147,6 +147,7 @@ swiper-container {
     margin-top: 7px;
 }
 
+/* menu */
 
 .header .inner-menu{
     flex: 1;
@@ -163,33 +164,35 @@ swiper-container {
 .header .inner-menu ul li i{
     color: #070707;
     font-size: 25px;
-    /* display: flex;
-    margin-left: 20px; */
+    display: block;
+}
+
+.header .inner-menu li:hover{
+    border-bottom: 10px solid rgb(15, 201, 111);
+    border-radius: 12px;
 }
 
 .header .inner-menu ul li{
-    align-items: center;
-    /* Chinh menu */
-    display: flex;
-    flex-direction: column;
-    /* end */
+    /* align-items: center; */
+    display: block;
+    border-bottom: 10px solid transparent;
+    /* transition: border-bottom-color 0.3s ease; */
 }
+
 
 .header .inner-menu ul a{
-    display: flex;
+    display: block;
 }
 
-.header .inner-menu ul li a:hover {
-    color: #d0546d;
-}
 
 .header .inner-menu ul a{
     font-weight: 700;
     font-size: 16px;
     color: var(--color-main);
 }
+/* end menu */
 
-
+/* thanh tim kiem */
 .header .inner-form{
     background-color: #faeaea;
     height: 44px;
@@ -763,7 +766,7 @@ swiper-container {
   .footer {
     /* background: linear-gradient(102.87deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7BA 104.24%); */
     background: linear-gradient(102.87deg, #e2b0b0 6.43%, #762676 78.33%, #3d4099 104.24%);
-    border-radius: 40px 40px 0 0;
+    /* border-radius: 40px 40px 0 0; */
     padding: 35px 0 35px 0;
   }
   .footer .inner-logo img{
@@ -1027,3 +1030,6 @@ swiper-container {
 
   }
   /* End footer */  
+
+
+
