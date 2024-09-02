@@ -72,7 +72,7 @@ a{
 .shoping{
     display: flex;
     flex-direction: column;
-    margin-right: -40px;
+    margin-right: -50px;
     align-items: center;
     color: var(--color-main);
     gap: 10px;
@@ -123,18 +123,20 @@ swiper-container {
   /* end slide */
 
 .header {
-    padding: 8px 10.1%;
-    /* padding: 12px 0; */
+    padding: 8px 0;
+    /* padding: 12px 10.1%; */
     background-color: #dee7e9;
     position: fixed;
     z-index: 2;
     top: 0;
+    /* full */
+    width: 100%;
 }
 .header .inner-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 14px;
+    gap: 20px;
 }
 
 .header .inner-logo img{
@@ -156,7 +158,7 @@ swiper-container {
     margin: 0;
     padding: 0;
     list-style: none;
-    gap: 44px;
+    gap: 40px;
 }
 .header .inner-menu ul li i{
     color: #070707;
