@@ -17,7 +17,7 @@ body{
     font-family: var(--font);
     /* Điều chỉnh khoảng cách giữa các dòng */
     line-height: 1.4; 
-    background-color: rgb(159, 237, 255);
+    background: linear-gradient(102.87deg, #f3e5e5 6.43%, #98bec2 78.33%, #aa4b97 104.24%);
     
 }
 b {
@@ -178,21 +178,36 @@ a{
 
 /* Làm ở đây */
 .introduction{
-  margin-top: 100px;
+  margin-top: 120px;
   line-height: 1.6;
-  font-family: Arial, sans-serif;
+  font-family: var(--font);
   margin-right: 50px;
   margin-left: 50px;
-  color: rgb(80, 42, 68);
+  color: #111010;
   margin-bottom: 30px;
 }
 .introduction p{
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 .introduction strong{
   display: block;
   margin-bottom: 3px;
-  color: rgb(240, 100, 40);
+  color: rgb(239, 74, 3);
+}
+.introduction span{
+  color: var(--color-main);
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+
+.introduction .col-1{
+  margin-left: 30px;
+}
+.introduction i{
+  color: #d12121;
+  font-weight: 500;
 }
 
 

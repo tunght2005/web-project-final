@@ -13,7 +13,7 @@ require('includes/header.php');
                     <div class="text-center">
                         <h1 class="h4 text-gray-900 mb-4">Thêm mới sản phẩm</h1>
                     </div>
-                    <form class="user" method="post" action="addproduct.php" enctype="multipart/form-data">                        
+                    <form class="user" method="post" action="addproduct_bai6.php" enctype="multipart/form-data">                        
                     <div class="form-group">
                         <input type="text" class="form-control form-control-user"
                             id="name" name="name" aria-describedby="emailHelp"
@@ -73,10 +73,10 @@ require('includes/header.php');
                         </select>
                     </div>
                     <div class="form-group">
-                    <label class="form-label">Thương hiệu:</label>
+                    <label class="form-label">Tác Giả:</label>
                    
                         <select class="form-control" name="thuonghieu">
-                        <option>Chọn thương hiệu</option>
+                        <option>Chọn tác giả</option>
 
                         <?php 
     require('../db/conn.php');

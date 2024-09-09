@@ -39,7 +39,7 @@
 
             // them vao CSDL - them thah cong moi upload anh len
             ## Upload file
-                                //$_FILES['file']['tmp_name']: $_FILES['file']['tmp_name'] - The temporary filename of the file in which the uploaded file was stored on the server.
+                                // $_FILES['file']['tmp_name']: $_FILES['file']['tmp_name'] - The temporary filename of the file in which the uploaded file was stored on the server.
             if(move_uploaded_file($_FILES['anhs']['tmp_name'][$i],$location)){
 
                 $imgs .= $location . ";";
@@ -55,7 +55,7 @@
     $sql_str = "INSERT INTO `products` (`id`, `name`, `slug`, `description`, `summary`, `stock`, `price`, `disscounted_price`, `images`, `category_id`, `brand_id`, `status`, `created_at`, `updated_at`) VALUES 
     (NULL, '$name', 
     '$slug', 
-    '$description', '$sumary', $stock, $giagoc, $giaban,'$imgs', $danhmuc, $thuonghieu, 'Active', NULL, NULL);";
+    '$description', '$sumary', $stock, $giagoc, '$giaban','$imgs', $danhmuc, $thuonghieu, 'Active', NULL, NULL);";
 
     // echo $sql_str; exit;
 

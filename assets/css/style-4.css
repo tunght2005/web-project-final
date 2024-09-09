@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(181, 255, 239);
+    background: linear-gradient(102.87deg, #51f4e9 6.43%, #c864c8 78.33%, #332c31 104.24%);
     margin: 0;
     font-family: var(--font);
     /* Điều chỉnh khoảng cách giữa các dòng */
@@ -179,33 +179,32 @@ a{
 /* Làm ở đây */
 /* form liên hệ */
 .contact-form {
-    background-color: #71ffbd;
-    padding: 40px;
-    border: 1px solid #ddd;
+    background: linear-gradient(102.87deg, #fd3131 6.43%, #f7a457 78.33%, #ff20c0 104.24%);
+    padding: 35px 50px;
+    margin-top: 140px;
+    border: 3px solid #050505;
     border-radius: 8px;
     max-width: 500px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(144, 76, 76, 0.1);
+    box-shadow: 0 0 20px rgba(144, 76, 76, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-img{
-  width: 50%;
-  height: 25%;
-  object-fit: cover;
-}
-.contact-form input::placeholder{
+
+.contact-form input::placeholder,textarea::placeholder{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font);
   color: rgb(255, 122, 34);
-}
-.contact-form textarea::placeholder{
-  color: rgb(255,122,34);
 }
 p{
   color: #f44336;
 }
 .contact-form h2 {
-    margin-top: 50px;
+    margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
-    color: rgb(15, 201, 111);
+    color: rgb(119, 13, 13);
 }
 .contact-form label {
     display: block;
@@ -220,40 +219,51 @@ p{
     border-radius: 4px;
 }
 .contact-form button {
-    width: 48%;
+    height: 40px;
+    width: 100px;
+    max-width: 400px;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid rgb(255, 41, 41);
+    border-radius: 5px;
     cursor: pointer;
-    background-color: #00ffff;
-    color: rgb(255, 255, 255);
+    background-color: #ea7d11;
+    color: rgb(0, 0, 0);
     font-size: 16px;
+    margin-top: 10px; 
+    align-self: center; 
 }
+
 .contact-form button:hover {
-    background-color: rgb(0, 255, 140);
+    background-color: rgb(4, 130, 73);
     opacity: 0.9;
 }
 fieldset {
-    border: 2px solid #4CAF50;
+    border: 2px solid #a1180c;
     padding: 20px;
     border-radius: 8px;
     position: relative;
 }
-legend {
-    margin-top: 40px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #4CAF50;
-    padding: 0 10px;
-    background-color: #f9f9f9;
-    position: absolute;
-    top: -10px; /* Nâng cao vị trí của legend để không bị chạm vào khung fieldset */
-    left: 10px;
-}
+
 .contact-form input[type="tel"]{
     appearance: textfield;
 }
 
+.container .col-wrap{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+.col-lg-5{
+  margin-top: 140px;
+}
+span{
+  color: var(--color-main);
+  font-weight: 700;
+  font: var(--font);
+}
 
 
 

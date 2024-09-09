@@ -71,10 +71,10 @@ require('includes/header.php');
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Thương hiệu:</label>
+                                <label class="form-label">Tác Giả:</label>
 
                                 <select class="form-control" name="thuonghieu">
-                                    <option>Chọn thương hiệu</option>
+                                    <option>Chọn tác giả</option>
 
                                     <?php
                                     require('../db/conn.php');

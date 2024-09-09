@@ -9,12 +9,12 @@ require('includes/header.php');
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
               <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-              <a
+              <!-- <a
                 href="#"
                 class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                 ><i class="fas fa-download fa-sm text-white-50"></i> Generate
                 Report</a
-              >
+              > -->
             </div>
 
             <!-- Content Row -->
@@ -28,10 +28,10 @@ require('includes/header.php');
                         <div
                           class="text-xs font-weight-bold text-primary text-uppercase mb-1"
                         >
-                          Earnings (Monthly)
+                          Thu Nhập (Tháng)
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $40,000
+                          <!-- $40,000 -->
                         </div>
                       </div>
                       <div class="col-auto">
@@ -51,10 +51,10 @@ require('includes/header.php');
                         <div
                           class="text-xs font-weight-bold text-success text-uppercase mb-1"
                         >
-                          Earnings (Annual)
+                          Thu Nhập (Năm)
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          $215,000
+                          <!-- $215,000 -->
                         </div>
                       </div>
                       <div class="col-auto">
@@ -74,14 +74,14 @@ require('includes/header.php');
                         <div
                           class="text-xs font-weight-bold text-info text-uppercase mb-1"
                         >
-                          Tasks
+                          Nhiệm vụ
                         </div>
                         <div class="row no-gutters align-items-center">
                           <div class="col-auto">
                             <div
                               class="h5 mb-0 mr-3 font-weight-bold text-gray-800"
                             >
-                              50%
+                              <!-- 50% -->
                             </div>
                           </div>
                           <div class="col">
@@ -117,10 +117,10 @@ require('includes/header.php');
                         <div
                           class="text-xs font-weight-bold text-warning text-uppercase mb-1"
                         >
-                          Pending Requests
+                          Yêu câu đang được xữ lí
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          18
+                          <!-- 18 -->
                         </div>
                       </div>
                       <div class="col-auto">
@@ -143,7 +143,7 @@ require('includes/header.php');
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Earnings Overview
+                      Tổng thu nhập
                     </h6>
                     <div class="dropdown no-arrow">
                       <a
@@ -163,13 +163,12 @@ require('includes/header.php');
                         class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                         aria-labelledby="dropdownMenuLink"
                       >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-header">Chức năng:</div>
+                        <a class="dropdown-item" href="#">Hoạt động</a>
+                        <a class="dropdown-item" href="#">Các hoạt động khác</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
+                          >Có điều gì khác</a>
                       </div>
                     </div>
                   </div>
@@ -190,7 +189,7 @@ require('includes/header.php');
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Revenue Sources
+                      Nguồn thu nhập
                     </h6>
                     <div class="dropdown no-arrow">
                       <a
@@ -210,13 +209,12 @@ require('includes/header.php');
                         class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                         aria-labelledby="dropdownMenuLink"
                       >
-                        <div class="dropdown-header">Dropdown Header:</div>
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-header">Chức năng:</div>
+                        <a class="dropdown-item" href="#">Hoạt động</a>
+                        <a class="dropdown-item" href="#">Các hoạt động khác</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
+                          >Có điều gì khác</a>
                       </div>
                     </div>
                   </div>
@@ -227,13 +225,13 @@ require('includes/header.php');
                     </div>
                     <div class="mt-4 text-center small">
                       <span class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> Direct
+                        <i class="fas fa-circle text-primary"></i> Trực tiếp
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-success"></i> Social
+                        <i class="fas fa-circle text-success"></i> Xã hội
                       </span>
                       <span class="mr-2">
-                        <i class="fas fa-circle text-info"></i> Referral
+                        <i class="fas fa-circle text-info"></i> Giới thiệu
                       </span>
                     </div>
                   </div>
@@ -246,7 +244,7 @@ require('includes/header.php');
               <!-- Content Column -->
               <div class="col-lg-6 mb-4">
                 <!-- Project Card Example -->
-                <div class="card shadow mb-4">
+                <!-- <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                   </div>
@@ -317,10 +315,10 @@ require('includes/header.php');
                       ></div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Color System -->
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-lg-6 mb-4">
                     <div class="card bg-primary text-white shadow">
                       <div class="card-body">
@@ -386,11 +384,11 @@ require('includes/header.php');
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <div class="col-lg-6 mb-4">
                 <!-- Illustrations -->
-                <div class="card shadow mb-4">
+                <!-- <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
                       Illustrations
@@ -420,10 +418,10 @@ require('includes/header.php');
                       >Browse Illustrations on unDraw &rarr;</a
                     >
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Approach -->
-                <div class="card shadow mb-4">
+                <!-- <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">
                       Development Approach
@@ -442,7 +440,7 @@ require('includes/header.php');
                       classes.
                     </p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
          
