@@ -39,9 +39,9 @@
                         </ul>
                      </nav>
                     <!-- seach -->
-                    <form action="timkiem.php" method="get" class="inner-form">
-                        <input name="keyword" placeholder="Nhập từ khoá...">
-                        <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
+                    <form action="index.danhmuc.php" method="get" class="inner-form" onsubmit="return searchByEnter()">
+                        <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
+                        <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
                     <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i>

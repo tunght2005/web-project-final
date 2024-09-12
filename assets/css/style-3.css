@@ -17,7 +17,6 @@ body{
     font-family: var(--font);
     /* Điều chỉnh khoảng cách giữa các dòng */
     line-height: 1.4; 
-    background: linear-gradient(102.87deg, #f3e5e5 6.43%, #98bec2 78.33%, #aa4b97 104.24%);
     
 }
 b {
@@ -177,6 +176,21 @@ a{
 
 
 /* Làm ở đây */
+
+.content-header{
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.content-header .col-r{
+  font-size: 30px;
+  color: #CCD1D2;
+}
+.content-header .col-h{
+  font-size: 30px;
+  font-family: var(--font);
+  font-weight: 600;
+}
 .introduction{
   margin-top: 120px;
   line-height: 1.6;
@@ -184,10 +198,10 @@ a{
   margin-right: 50px;
   margin-left: 50px;
   color: #111010;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .introduction p{
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .introduction strong{
   display: block;

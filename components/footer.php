@@ -1,4 +1,5 @@
-        <!-- Footer -->
+        <script src="javascript/sort.js"></script>
+       <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <!-- <div class="inner-top">

@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="vi">
     <head>
@@ -41,8 +42,8 @@ session_start();
                         </ul>
                      </nav>
                     <!-- seach -->
-                    <form action="#" class="inner-form">
-                        <input name="keyword" placeholder="Nhập từ khoá...">
+                    <form action="" class="inner-form">
+                        <input name="keyword" placeholder="Nhập từ khoá..." >
                         <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
@@ -77,12 +78,12 @@ session_start();
             <div class="inner-wrap">
                 <div class="inner-content">
                    <span>Danh Mục</span>
-                    <select name="" id="" class="inner-arrange-right">
+                    <select name="sort" id="sort" class="inner-arrange-right" onchange="sortProducts()">
                         <option class="choice">--Chọn--</option>
-                        <option value="" class="inner-high">
+                        <option value="high" class="inner-high">
                             Sắp xếp theo giá cao
                         </option>
-                        <option value="" class="inner-low">
+                        <option value="low" class="inner-low">
                             Sắp xếp theo giá thấp
                         </option>
                     </select>
@@ -94,7 +95,7 @@ session_start();
                 <div class="inner-category-sub">
                     <div class="section-cate-1">
                         <span>Chuyên Mục</span>
-                        <select name="" id="" class="col-1">
+                        <select name="category" id="category" class="col-1" onchange="filterProducts()">
                             <!-- Cập nhật danh sách danh mục trên server -->
                             <option class="choice">--Chọn--</option>
                             <?php 
@@ -104,7 +105,7 @@ session_start();
                             while ($row = mysqli_fetch_assoc($result)){
                             ?>
 
-                            <option value="" class="inner-name">
+                            <option value="<?=$row['slug']?>" class="inner-name">
                                 <?=$row['name']?>
                             </option>
                              <?php 
@@ -120,7 +121,7 @@ session_start();
                     </div>
                     <div class="section-cate-2">
                         <span>Tác Giả</span>
-                        <select name="" id="" class="col-1">
+                        <select name="brand" id="brand" class="col-1" onchange="filterProducts()">
                             <option class="choice">--Chọn--</option>
                             <!-- Cập nhật danh sách tác giả trên server -->
                             <?php 
@@ -130,7 +131,7 @@ session_start();
                             while ($row = mysqli_fetch_assoc($result)){
                             ?>
 
-                            <option value="" class="inner-name">
+                            <option value="<?=$row['slug']?>" class="inner-name">
                                 <?=$row['name']?>
                             </option>
                              <?php 
@@ -186,6 +187,7 @@ session_start();
                         <!--End cập nhật  -->
                 </div>           
             </div>
+            <script src="javascript/sort.js"></script>
         </main>
         <!-- section 2 -->
         <!-- Section 4 -->

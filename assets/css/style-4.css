@@ -13,7 +13,6 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(102.87deg, #51f4e9 6.43%, #c864c8 78.33%, #332c31 104.24%);
     margin: 0;
     font-family: var(--font);
     /* Điều chỉnh khoảng cách giữa các dòng */
@@ -76,7 +75,7 @@ a{
     /* padding: 12px 10.1%; */
     background-color: #dee7e9;
     position: fixed;
-    z-index: 2;
+    z-index: 100;
     top: 0;
     /* full */
     width: 100%;
@@ -178,14 +177,57 @@ a{
 
 /* Làm ở đây */
 /* form liên hệ */
+.col-back .contact-1 img{
+  width: 100%;
+  filter: grayscale(100%) brightness(50%); /* Làm ảnh thành màu xám với độ sáng phù hợp */
+  opacity: 0.5; /* Điều chỉnh độ trong suốt */
+  z-index: 0;
+}
+.col-back{
+  margin-top: 90px;
+  
+}
+.col-back .contact-1 .contact-2{
+  margin-top: -450px;
+  margin-left: 520px;
+  text-align: center;
+  position: absolute;
+}
+
+.col-back .contact-1{
+  background-color: #2f2e2e;
+  z-index: 1;
+  position: relative;
+}
+
+.col-back .contact-1 span{
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.col-back .contact-1 p{
+  font-size: 18px;
+  color: #fffefe;
+
+}
+.inner-status{
+  display: inline-flex;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 80px;
+  box-shadow: 0 0 7px rgba(23, 22, 22, 0.1);
+  border-radius: 10px;
+}
 .contact-form {
-    background: linear-gradient(102.87deg, #fd3131 6.43%, #f7a457 78.33%, #ff20c0 104.24%);
     padding: 35px 50px;
-    margin-top: 140px;
-    border: 3px solid #050505;
-    border-radius: 8px;
+    margin-top: 10px;
+    /* border: 3px solid #050505; */
+    /* border-radius: 50%; */
+    width: 500px;
     max-width: 500px;
-    box-shadow: 0 0 20px rgba(144, 76, 76, 0.1);
+    /* box-shadow: 0 0 5px rgba(144, 76, 76, 0.1); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,16 +237,16 @@ a{
   font-size: 14px;
   font-weight: 500;
   font-family: var(--font);
-  color: rgb(255, 122, 34);
+  color: rgb(219, 173, 141);
 }
 p{
   color: #f44336;
 }
-.contact-form h2 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    color: rgb(119, 13, 13);
+.inner-content-status {
+   line-height: 3;
+   color: #00171F;
+   font-weight: 500;
+   font-size: 14px;
 }
 .contact-form label {
     display: block;
@@ -212,25 +254,29 @@ p{
     font-weight: bold;
 }
 .contact-form input, .contact-form textarea {
+  background-color: #f6f4f4;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #eae8e8;
+    border-radius: 20px;
 }
 .contact-form button {
     height: 40px;
-    width: 100px;
+    width: 70px;
     max-width: 400px;
-    padding: 10px;
-    border: 1px solid rgb(255, 41, 41);
-    border-radius: 5px;
+    border: 1px solid rgb(231, 58, 23);
     cursor: pointer;
     background-color: #ea7d11;
     color: rgb(0, 0, 0);
-    font-size: 16px;
+    font-size: 20px;
+    color: #fefefe;
+    font-family: var(--font);
     margin-top: 10px; 
     align-self: center; 
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: 600;
 }
 
 .contact-form button:hover {
@@ -248,17 +294,30 @@ fieldset {
     appearance: textfield;
 }
 
-.container .col-wrap{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
+.col-back .container .col-wrap{
+  gap: 40px;
   margin-bottom: 50px;
 }
 
-.col-lg-5{
-  margin-top: 140px;
+.col-back .container{
+  position: relative;
+  margin-top: -110px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.col-back .container .col-lg-5{
+  background-position: 50% 50%;
+  margin: -105px 0px 0px 0px;
+  padding: 0;
+  position: relative; 
+  z-index: 4;
+  top: 100px; 
+  left: 0; 
+}
+
 span{
   color: var(--color-main);
   font-weight: 700;
