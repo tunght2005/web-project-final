@@ -80,7 +80,7 @@ session_start();
                 <div class="inner-content">
                    <span>Danh Mục</span>
                     <select name="sort" id="sort" class="inner-arrange-right" onchange="sortProducts()">
-                        <option class="choice">--Chọn--</option>
+                        <option class="choice" value="">--Chọn--</option>
                         <option value="high" class="inner-high">
                             Sắp xếp theo giá cao
                         </option>
@@ -98,7 +98,7 @@ session_start();
                         <span>Chuyên Mục</span>
                         <select name="category" id="category" class="col-1" onchange="filterProducts()">
                             <!-- Cập nhật danh sách danh mục trên server -->
-                            <option class="choice">--Chọn--</option>
+                            <option class="choice" value="">--Chọn--</option>
                             <?php 
                             require('./db/conn.php');
                             $sql_str = "select * from categories order by name";
@@ -123,7 +123,7 @@ session_start();
                     <div class="section-cate-2">
                         <span>Tác Giả</span>
                         <select name="brand" id="brand" class="col-1" onchange="filterProducts()">
-                            <option class="choice">--Chọn--</option>
+                            <option class="choice" value="">--Chọn--</option>
                             <!-- Cập nhật danh sách tác giả trên server -->
                             <?php 
                             require('./db/conn.php');
@@ -271,5 +271,27 @@ session_start();
             </div>
         </footer>
         <!-- End Footer -->
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i class="fa-solid fa-hand-point-up"></i></button>
+        <script>
+        // Đặt JavaScript ở đây
+        window.onscroll = function() {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          const backToTopBtn = document.getElementById("backToTopBtn");
+          
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        }
+
+        function topFunction() {
+          document.body.scrollTop = 0; // Safari
+          document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+        }
+    </script>
     </body>
 </html>

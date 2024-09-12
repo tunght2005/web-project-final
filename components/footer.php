@@ -76,5 +76,27 @@
             </div>
         </footer>
         <!-- End Footer -->
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i class="fa-solid fa-hand-point-up"></i></button>
+        <script>
+        // Đặt JavaScript ở đây
+        window.onscroll = function() {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          const backToTopBtn = document.getElementById("backToTopBtn");
+          
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        }
+
+        function topFunction() {
+          document.body.scrollTop = 0; // Safari
+          document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+        }
+    </script>
     </body>
 </html>

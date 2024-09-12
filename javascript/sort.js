@@ -53,24 +53,29 @@ function filterProducts() {
     const category = document.getElementById('category').value;
     const brand = document.getElementById('brand').value;
 
-    console.log("Category: " + category);
-    console.log("Brand: " + brand);
-
+    // Lấy tất cả các sản phẩm
     const products = document.querySelectorAll('.product-item a');
+
+    // Kiểm tra xem có chọn mặc định hay không (nếu cả hai là rỗng hoặc "default")
+    if (category === "" && brand === "") {
+        products.forEach((product) => {
+            product.closest('.product-item').style.display = "block"; // Hiển thị tất cả sản phẩm
+        });
+        return; // Thoát khỏi hàm vì không cần lọc
+    }
+
+    // Lọc các sản phẩm theo chuyên mục và tác giả
     products.forEach((product) => {
         const productFilter = product.getAttribute('data-filter');
-        console.log("Product Filter: " + productFilter);
 
         if ((category === "" || productFilter.includes(category)) &&
             (brand === "" || productFilter.includes(brand))) {
-            product.closest('.product-item').style.display = "block";
+            product.closest('.product-item').style.display = "block"; // Hiển thị sản phẩm phù hợp
         } else {
-            product.closest('.product-item').style.display = "none";
+            product.closest('.product-item').style.display = "none"; // Ẩn sản phẩm không phù hợp
         }
     });
 }
-
-
 
 
 // Hàm chuyển đổi chuỗi có dấu thành không dấu
