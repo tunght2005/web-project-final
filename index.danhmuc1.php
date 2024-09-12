@@ -18,7 +18,7 @@ require_once('./db/conn.php');
                 <div class="inner-wrap">
                     <!-- logo -->
                     <div class="inner-logo">
-                        <a href="index.php">
+                        <a href="index1.php">
                             <img src="assets/images/logo_3.png" alt="logo">
                         </a>
                     </div>
@@ -26,16 +26,16 @@ require_once('./db/conn.php');
                      <nav class="inner-menu">
                         <ul>
                             <li>
-                                <span><a href="index.php"><i class="fa-solid fa-house"></i>Trang Chủ</a></span>
+                                <span><a href="index1.php"><i class="fa-solid fa-house"></i>Trang Chủ</a></span>
                             </li>
                             <li>
-                                <span><a href="index.danhmuc.php"><i class="fa-solid fa-list"></i>Danh Mục</a></span>
+                                <span><a href="index.danhmuc1.php"><i class="fa-solid fa-list"></i>Danh Mục</a></span>
                             </li>
                             <li>
-                                <span><a href="index.gioithieu.php"><i class="fa-solid fa-display"></i>Giới Thiệu</a> </span>
+                                <span><a href="index.gioithieu1.php"><i class="fa-solid fa-display"></i>Giới Thiệu</a> </span>
                             </li>
                             <li>
-                                <span><a href="index.lienhe.php"><i class="fa-solid fa-envelope"></i>Liên Hệ</a> </span>
+                                <span><a href="index.lienhe1.php"><i class="fa-solid fa-envelope"></i>Liên Hệ</a> </span>
                             </li>
                             <!-- <li>
                                 <span><a href="#"><i class="fa-regular fa-address-card"></i>Tài khoản</a></span>
@@ -51,14 +51,9 @@ require_once('./db/conn.php');
                     <div class="dropdown">
                         <a href="#" class="button"><i class="fa-regular fa-user"></i></a>
                         <div class="dropdown-content">
-                            <a href="#" onclick="alert('Hồ sơ đang được phát triển.....')"><i class="fa-regular fa-address-book"></i>
-                            <?php
-                                $user = $_SESSION['user'];
-                                echo $user['name'];
-                            ?>
-                            </a>
-                            <a href="order.php"><i class="fa-solid fa-eye"></i> Xem Đơn</a>
-                            <a href="logout1.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng Xuất</a>
+                            <a href="login1.php"><i class="fa-regular fa-address-book"></i> Đăng Nhập</a>
+                            <!-- <a href="order.php"><i class="fa-solid fa-eye"></i> Xem Đơn</a>
+                            <a href="logout1.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng Xuất</a> -->
                         </div>
                     </div>
                      <!-- giỏ hàng -->
@@ -222,7 +217,7 @@ require_once('./db/conn.php');
         <!-- Footer -->
         <footer class="footer">
             <div class="container">
-                <!-- <div class="inner-top">
+                <div class="inner-top">
                     <div class="inner-content">
                     Đăng ký ngay để hưởng những <strong>Ưu Đãi</strong>
                     </div>
@@ -230,21 +225,21 @@ require_once('./db/conn.php');
                     <input type="email" name="" placeholder="Nhập email của bạn...">
                     <button>Đăng Ký Ngay</button>
                     </form>
-                </div> -->
+                </div>
                 <div class="inner-middle">
                     <nav class="inner-links">
                     <ul>
                         <li>
-                        <a href="index.php">Trang Chủ</a>
+                        <a href="index1.php">Trang Chủ</a>
                         </li>
                         <li>
-                        <a href="index.danhmuc.php">Danh Mục</a>
+                        <a href="index1.danhmuc.php">Danh Mục</a>
                         </li>
                         <li>
-                        <a href="index.gioithieu.php">Giới Thiệu</a>
+                        <a href="index1.gioithieu.php">Giới Thiệu</a>
                         </li>
                         <li>
-                        <a href="index.lienhe.php">Liên Hệ</a>
+                        <a href="index1.lienhe.php">Liên Hệ</a>
                         </li>
                     </ul>
                     </nav>

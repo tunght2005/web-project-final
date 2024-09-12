@@ -607,3 +607,61 @@ select.col-1 {
 #backToTopBtn:hover {
   background-color: #333; /* Đổi màu khi hover */
 }
+
+#notification {
+  display: none;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+/* menu file */
+/* Style cho menu đa cấp */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Ẩn menu khi chưa hover */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Style cho các mục menu */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Thay đổi màu khi hover qua các mục menu */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hiện menu khi hover qua nút */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Thay đổi màu của nút khi hover */
+.dropdown:hover .button {
+  background-color: #0056b3;
+}

@@ -1,15 +1,102 @@
-<?php
-session_start();
-require_once('./db/conn.php');
-// Kiểm tra xem người dùng đã đăng nhập chưa
-if (!isset($_SESSION['user'])) {
-    // Chuyển hướng đến trang dành cho người xem nếu chưa đăng nhập
-    header("Location: login1.php");
-    exit();
-}
-require_once('components/header.php');
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WEB-TRANH</title>
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-?>
+    </head>
+    <body> 
+        <header class="header">
+            <div class="container">
+                <div class="inner-wrap">
+                    <!-- Menu Mobile -->
+                    <button class="inner-menu-mobile">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <!-- logo -->
+                    <div class="inner-logo">
+                        <a href="index1.php">
+                            <img src="assets/images/logo_3.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- menu -->
+                     <nav class="inner-menu">
+                        <ul>
+                            <li>
+                                <span><a href="index1.php"><i class="fa-solid fa-house"></i>Trang Chủ</a></span>
+                            </li>
+                            <li>
+                                <span><a href="index.danhmuc1.php"><i class="fa-solid fa-list"></i>Danh Mục</a></span>
+                            </li>
+                            <li>
+                                <span><a href="index.gioithieu1.php"><i class="fa-solid fa-display"></i>Giới Thiệu</a> </span>
+                            </li>
+                            <li>
+                                <span><a href="index.lienhe1.php"><i class="fa-solid fa-envelope"></i>Liên Hệ</a> </span>
+                            </li>
+                            <!-- <li>
+                                <span><a href=""><i class="fa-regular fa-address-card"></i>Tài khoản</a></span>
+                            </li> -->
+                        </ul>
+                     </nav>
+                    <!-- seach -->
+                    
+                    <form action="index.danhmuc.php" method="get" class="inner-form" onsubmit="return searchByEnter()">
+                        <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
+                        <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <!-- button -->
+                    <div class="dropdown">
+                        <a href="#" class="button" onclick="ar"><i class="fa-regular fa-user"></i></a>
+                        <div class="dropdown-content">
+                            <a href="login1.php"><i class="fa-regular fa-address-book"></i> Đăng Nhập</a>
+                            <!-- <a href="order.php"><i class="fa-solid fa-eye"></i> Xem Đơn</a>
+                            <a href="logout1.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng Xuất</a> -->
+                        </div>
+                    </div>
+                      <!-- giỏ hàng -->
+                    <a href="index.cart.php" class="shoping">
+                        <span>
+                            <?php
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
+                            ?>
+                        </span>
+                       <i class="fa-brands fa-shopify"></i> 
+                    </a>
+                </div>
+            </div>
+        </header>
         <!-- section -->
         <section class="section-1">
             <div class="container">
@@ -330,8 +417,8 @@ require_once('components/header.php');
                             </div>
                         </a>
                     </div>
-                    <div class="product-item">
-                        <a href="#">
+                    <div class="product-item"> -->
+                        <!-- <a href="#">
                             <div class="inner-image">
                                 <img src="assets/images/tranh-price-9.jpg" alt="">
                             </div>
@@ -562,7 +649,7 @@ require_once('components/header.php');
                 ?>
             </div>
             <div class="inner-button-bottom">
-                <a href="index.danhmuc.php" class="button-outline">
+                <a href="index.danhmuc1.php" class="button-outline">
                 Xem thêm <i class="fa-solid fa-angle-right"></i>
                 </a>
             </div>
@@ -571,6 +658,105 @@ require_once('components/header.php');
         <!-- End Section 4 -->
 
         <!-- Footer -->
-<?php
-require_once('components/footer.php');
-?>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="inner-top">
+                    <div class="inner-content">
+                    Đăng ký ngay để hưởng những <strong>Ưu Đãi</strong>
+                    </div>
+                    <form action="" class="inner-form">
+                    <input type="email" name="" placeholder="Nhập email của bạn...">
+                    <button>Đăng Ký Ngay</button>
+                    </form>
+                </div>
+                <div class="inner-middle">
+                    <nav class="inner-links">
+                    <ul>
+                        <li>
+                        <a href="#">Trang Chủ</a>
+                        </li>
+                        <li>
+                        <a href="#">Danh Mục</a>
+                        </li>
+                        <li>
+                        <a href="#">Giới Thiệu</a>
+                        </li>
+                        <li>
+                        <a href="#">Liên Hệ</a>
+                        </li>
+                    </ul>
+                    </nav>
+                    <nav class="inner-socials">
+                    <ul>
+                        <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+                <div class="inner-bottom">
+                    <div class="inner-copyright">
+                    ©2024 TungTai@gmail.com [All rights reserved.]
+                    </div>
+                    <div class="inner-logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo_3.png" alt="">
+                    </a>
+                    </div>
+                    <nav class="inner-links">
+                    <ul>
+                        <li>
+                        <a href="#">Điều khoản dịch vụ</a>
+                        </li>
+                        <li>
+                        <a href="#">Chính sách bảo mật</a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><i class="fa-solid fa-hand-point-up"></i></button>
+        <script>
+        // Đặt JavaScript ở đây
+        window.onscroll = function() {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          const backToTopBtn = document.getElementById("backToTopBtn");
+          
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        }
+
+        function topFunction() {
+          document.body.scrollTop = 0; // Safari
+          document.documentElement.scrollTop = 0; // Chrome, Firefox, IE, Opera
+        }
+    </script>
+    </body>
+</html>

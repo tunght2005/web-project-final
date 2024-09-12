@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    require_once("./db/conn.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +25,6 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
-
 <body class="bg-gradient-primary">
 
     <div class="container">
@@ -39,30 +42,30 @@
                             <form class="user">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="text" name="text" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="Họ và tên đệm">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="text" name="text" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Tên">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Địa chỉ email...">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" name="password" class="form-control form-control-user"
                                             id="exampleInputPassword" placeholder="Mật khẩu">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" name="password" class="form-control form-control-user"
                                             id="exampleRepeatPassword" placeholder="Nhập lại mật khẩu">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Đăng Kí
+                                <a href="login1.php" class="btn btn-primary btn-user btn-block">
+                                    Đăng nhập với tài khoản!
                                 </a>
                                 <hr>
                                 <a href="#" onclick="alert('Đang thực thi đăng kí...')" class="btn btn-google btn-user btn-block">

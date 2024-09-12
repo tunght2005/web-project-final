@@ -6,6 +6,7 @@
     // $result = mysqli_query($conn, $sql_str);
     // $row = mysqli_fetch_assoc($result);
     // $anh_arr = explode(';', $row['images']);
+    // Kiểm tra xem người dùng đã đăng nhập chưa
 ?>
 
 
@@ -70,11 +71,19 @@
                         <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
-                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
-                    <?php
-                      $user = $_SESSION['user'];
-                      echo $user['name'];
-                    ?></a></span>
+                    <div class="dropdown">
+                        <a href="#" class="button"><i class="fa-regular fa-user"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="alert('Hồ sơ đang được phát triển.....')"><i class="fa-regular fa-address-book"></i>
+                            <?php
+                                $user = $_SESSION['user'];
+                                echo $user['name'];
+                            ?>
+                            </a>
+                            <a href="order.php"><i class="fa-solid fa-eye"></i> Xem Đơn</a>
+                            <a href="logout1.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng Xuất</a>
+                        </div>
+                    </div>
                      <!-- giỏ hàng -->
                     <a href="index.cart.php" class="shoping">
                         <span>
@@ -103,7 +112,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 105px; margin-top: 80px;">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Giỏ hàng</h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a href="">Trang chủ</a></p>
+                <p class="m-0"><a href="index.php">Trang chủ</a></p>
                 <p class="m-0 px-2">-</p>
                 <p class="m-0">Giỏ Hàng</p>
             </div>
@@ -148,9 +157,9 @@
                                         <td>
                                             <?= number_format($item['disscounted_price'] * $item['qty'], 0, '', '.') . " VNĐ" ?>
                                         </td>
-                                        <td><button class="btn btn-warning">Cập nhật</button></td>
-                                        <td><a href='deletecart.php?id=<?= $item['id'] ?>' class="btn btn-danger">Xóa</a>
-                                        </td>
+                                        <td><button class="btn btn-warning"><i class="fa-solid fa-user-pen"></i></i></button>
+                                        <a href='deletecart.php?id=<?= $item['id'] ?>' class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></a></td>
+                                        
                                     </tr>
                                 </form>
 

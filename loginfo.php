@@ -64,9 +64,11 @@
                                         </a>
                                     </form>
                                     <hr>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Quên mật khẩu?</a>
-                                    </div> -->
+                                    <div class="text-center">
+                                        <a href="registerfo1.php"  class="text-center">
+                                            Tạo tài khoản
+                                        </a>
+                                    </div>
                                     <div class="text-center">
                                         <a class="small" href="admin/login.php">Đăng nhập với tư cách là ADMIM</a>
                                     </div>

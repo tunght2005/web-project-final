@@ -3,13 +3,14 @@
         <footer class="footer">
             <div class="container">
                 <!-- <div class="inner-top">
-                    <div class="inner-content">
+                    <div class="inner-content" id="registration-form">
                     Đăng ký ngay để hưởng những <strong>Ưu Đãi</strong>
                     </div>
                     <form action="" class="inner-form">
-                    <input type="email" name="" placeholder="Nhập email của bạn...">
-                    <button>Đăng Ký Ngay</button>
+                    <input type="email" name="email" id="email" placeholder="Nhập email của bạn...">
+                    <button type="button" onclick="register()">Đăng Ký Ngay</button>
                     </form>
+                    <div id="notification" class="notification"></div>
                 </div> -->
                 <div class="inner-middle">
                     <nav class="inner-links">

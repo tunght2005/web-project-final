@@ -1,5 +1,6 @@
 <?php
 session_start();
 unset($_SESSION['user']);
-header("Location: login1.php");
+header("Location: index1.php");
+exit;
 ?>

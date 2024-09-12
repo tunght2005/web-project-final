@@ -1,5 +1,11 @@
 <?php 
     session_start();
+        // Kiểm tra xem người dùng đã đăng nhập chưa
+    if (!isset($_SESSION['user'])) {
+        // Chuyển hướng đến trang dành cho người xem nếu chưa đăng nhập
+        header("Location: login1.php");
+        exit();
+    }
     require_once('./db/conn.php');
     $idsp = $_GET['id'];
     $sql_str = "select * from products where id = $idsp";
@@ -103,12 +109,20 @@
                         <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
                         <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
-                    <!-- button -->
-                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
-                    <?php
-                      $user = $_SESSION['user'];
-                      echo $user['name'];
-                    ?></a></span>
+                  <!-- button -->
+                  <div class="dropdown">
+                        <a href="#" class="button"><i class="fa-regular fa-user"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="alert('Hồ sơ đang được phát triển.....')"><i class="fa-regular fa-address-book"></i>
+                            <?php
+                                $user = $_SESSION['user'];
+                                echo $user['name'];
+                            ?>
+                            </a>
+                            <a href="order.php"><i class="fa-solid fa-eye"></i> Xem Đơn</a>
+                            <a href="logout1.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Đăng Xuất</a>
+                        </div>
+                    </div>
                      <!-- giỏ hàng -->
                     <a href="index.cart.php" class="shoping">
                         <span>
@@ -203,8 +217,9 @@
                                 </button>
                             </div> -->
                         </div>
-                        <button class="btn btn-primary px-3" name="atcbtn"><i class="fa fa-shopping-cart mr-1"></i>Mua</button>
+                        <button class="btn btn-primary px-3" name="atcbtn"><i class="fa fa-shopping-cart mr-1" ></i>Mua</button>
                     </form>
+                    <script src="javascript/sort.js"></script>
                 </div>
                 <div class="d-flex pt-2">
                     <p class="text-dark font-weight-medium mb-0 mr-2">Chia sẽ:</p>
@@ -373,6 +388,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Products End -->
         <!-- End Section 4 -->
 
