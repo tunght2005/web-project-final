@@ -43,62 +43,76 @@ require_once("./db/conn.php");
                         </ul>
                      </nav>
                     <!-- seach -->
-                    <form action="#" class="inner-form">
-                        <input name="keyword" placeholder="Nhập từ khoá...">
-                        <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
+                    <form action="index.danhmuc.php" method="get" class="inner-form" onsubmit="return searchByEnter()">
+                        <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
+                        <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
-                    <span><a href="#" class="button"><i class="fa-regular fa-address-card"></i>
+                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
                     <?php
                       $user = $_SESSION['user'];
                       echo $user['name'];
                     ?></a></span>
                      <!-- giỏ hàng -->
                     <a href="index.cart.php" class="shoping">
-                        <span>
+                         <span>
                             <?php
-                            $cart = [];
-                            if(isset($_SESSION['cart'])) {
-                                $cart = $_SESSION['cart'];
-                            }
-                            $count = 0; //hien thi so luong san pham trong gio
-                            foreach ($cart as $item) {
-                                $count += $item['qty'];
-                            }
-                            // hien thi so luong
-                            echo $count;
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
                             ?>
                         </span>
-                        <i class="fa-solid fa-cart-shopping"></i> 
+                       <i class="fa-brands fa-shopify"></i> 
                     </a>
                 </div>
             </div>
         </header>
         <!-- End Header -->
         <!-- Làm ở đây -->
-        <div class="container">
-            <div class="col-wrap">
-               <form class="contact-form">
-                <h2>Điền thông tin của bạn </h2>
-                <input type="text" id="name" name="name" placeholder="Họ và tên" required>
-
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                
-                <input type="tel" id="phone" name="phone" placeholder="Số điện thoại" required  maxlength="10" 
-                inputmode="numeric" pattern="[0-9]*" oninput="this.value= this.value.replace(/[^0-9]/g,'');">
-
-                <textarea id="message" name="message" rows="5" placeholder="Lời nhắn" required></textarea>
-
-                <button type="submit">Gửi</button>
-                </form>
-                <div class="col-lg-5" data-wow-delay="0.5s">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1024977672523!2d106.71400127687097!3d10.803461261878773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a6b9033c77%3A0x43e084d39ebbe5f8!2zMjUgVsO1IE9hbmgsIEtodSBwaMO0zIEgMSwgQsOsbmggVGjhuqFuaCwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2sbd!4v1725588020653!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div> 
+        <div class="col-back">
+            <div class="contact-1">
+                <img src="assets/images/back2.jpg" alt="">
+                <div class="contact-2">
+                    <span>Liên hệ với chúng tôi</span>
+                    <p>Đến với chúng tôi để tận hưởng các tác phẩm nghệ thuật đặc sắc, hoàn mỹ</p>
+                </div>
             </div>
-            <p><span>SĐT: </span>0999999999</p>
-            <p><span>Email:</span> tungtai@gamil.com</p>
-            <p><span>Địa chỉ: </span> Võ Oanh, P25, Q.Bình Thạnh, Tp Hồ Chí Minh</p>
-        </div>
+            <div class="container">
+                <div class="col-wrap"> 
+                    <div class="col-lg-5" data-wow-delay="0.5s"></div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1024977672523!2d106.71400127687097!3d10.803461261878773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a6b9033c77%3A0x43e084d39ebbe5f8!2zMjUgVsO1IE9hbmgsIEtodSBwaMO0zIEgMSwgQsOsbmggVGjhuqFuaCwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2sbd!4v1725588020653!5m2!1sen!2sbd" width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="inner-status">
+                        <form class="contact-form">
+                            <!-- <h2>Điền thông tin của bạn </h2> -->
+                            <input type="text" id="name" name="name" placeholder="Họ và tên" required>
+
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            
+                            <input type="tel" id="phone" name="phone" placeholder="Số điện thoại" required  maxlength="10" 
+                            inputmode="numeric" pattern="[0-9]*" oninput="this.value= this.value.replace(/[^0-9]/g,'');">
+
+                            <textarea id="message" name="message" rows="5" placeholder="Lời nhắn" required></textarea>
+
+                            <button type="submit">Gửi</button>
+                        </form>
+                        <div class="inner-content-status">
+                            <i class="fa-solid fa-location-dot"> </i> Võ Oanh, P25, Q.Bình Thạnh, Tp Hồ Chí Minh <br>
+                            <i class="fa-solid fa-phone"></i> 099 999 9999 <br>
+                            <i class="fa-regular fa-envelope"></i> tungtai@gamil.com <br>
+                            <i class="fa-brands fa-facebook"></i> https://www.facebook.com/? <br>
+                            <i class="fa-brands fa-telegram"></i> 099 999 9999 <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
 
         <!-- section -->

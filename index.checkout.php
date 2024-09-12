@@ -97,33 +97,33 @@ if (isset($_POST['btDathang'])) {
                         </ul>
                      </nav>
                     <!-- seach -->
-                    <form action="#" class="inner-form">
-                        <input name="keyword" placeholder="Nhập từ khoá...">
-                        <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
+                    <form action="index.danhmuc.php" method="get" class="inner-form" onsubmit="return searchByEnter()">
+                        <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
+                        <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
-                    <span><a href="#" class="button"><i class="fa-regular fa-address-card"></i>
+                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
                     <?php
                       $user = $_SESSION['user'];
                       echo $user['name'];
                     ?></a></span>
                      <!-- giỏ hàng -->
-                    <a href="#" class="shoping">
+                    <a href="index.cart.php" class="shoping">
                         <span>
                             <?php
-                            $cart = [];
-                            if(isset($_SESSION['cart'])) {
-                                $cart = $_SESSION['cart'];
-                            }
-                            $count = 0; //hien thi so luong san pham trong gio
-                            foreach ($cart as $item) {
-                                $count += $item['qty'];
-                            }
-                            // hien thi so luong
-                            echo $count;
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
                             ?>
                         </span>
-                        <i class="fa-solid fa-cart-shopping"></i> 
+                       <i class="fa-brands fa-shopify"></i> 
                     </a>
                 </div>
             </div>
@@ -132,10 +132,10 @@ if (isset($_POST['btDathang'])) {
         <!-- Section 4 -->
          <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 150px; margin-top: 100px;">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 105px; margin-top: 80px;">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Thanh Toán</h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a href="">Home</a></p>
+                <p class="m-0"><a href="">Trang chủ</a></p>
                 <p class="m-0 px-2">-</p>
                 <p class="m-0">Thanh Toán</p>
             </div>

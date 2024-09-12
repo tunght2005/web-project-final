@@ -4,8 +4,27 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WEB-TRANH</title>
+         <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+        <link rel="manifest" href="../favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
     <body> 
         <!-- Header -->
@@ -44,27 +63,28 @@
                         <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
-                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i>
+                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
                     <?php
                       $user = $_SESSION['user'];
                       echo $user['name'];
                     ?></a></span>
                      <!-- giỏ hàng -->
                     <a href="index.cart.php" class="shoping">
-                    <?php
-                        $cart = [];
-                        if(isset($_SESSION['cart'])) {
-                            $cart = $_SESSION['cart'];
-                        }
-                        $count = 0; //hien thi so luong san pham trong gio
-                        foreach ($cart as $item) {
-                            $count += $item['qty'];
-                        }
-                        // hien thi so luong
-                        echo $count;
-                    ?>
-                        <i class="fa-solid fa-cart-shopping"></i> 
-                        
+                        <span>
+                            <?php
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
+                            ?>
+                        </span>
+                       <i class="fa-brands fa-shopify"></i> 
                     </a>
                 </div>
             </div>

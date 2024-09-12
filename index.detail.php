@@ -98,29 +98,34 @@
                         </ul>
                      </nav>
                     <!-- seach -->
-                    <form action="#" class="inner-form">
-                        <input name="keyword" placeholder="Nhập từ khoá...">
-                        <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
+                   <!-- seach -->
+                   <form action="index.danhmuc.php" method="get" class="inner-form" onsubmit="return searchByEnter()">
+                        <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
+                        <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
-                    <span><a href="#" class="button"><i class="fa-regular fa-address-card"></i>Name</a></span>
+                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
+                    <?php
+                      $user = $_SESSION['user'];
+                      echo $user['name'];
+                    ?></a></span>
                      <!-- giỏ hàng -->
                     <a href="index.cart.php" class="shoping">
                         <span>
                             <?php
-                            $cart = [];
-                            if(isset($_SESSION['cart'])) {
-                                $cart = $_SESSION['cart'];
-                            }
-                            $count = 0; //hien thi so luong san pham trong gio
-                            foreach ($cart as $item) {
-                                $count += $item['qty'];
-                            }
-                            // hien thi so luong
-                            echo $count;
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
                             ?>
                         </span>
-                        <i class="fa-solid fa-cart-shopping"></i> 
+                       <i class="fa-brands fa-shopify"></i> 
                     </a>
                 </div>
             </div>
@@ -129,7 +134,7 @@
         <!-- Section 4 -->
          <!-- Page Header Start -->
     <div class="container-fluid bg-secondary mb-5">
-        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 150px; margin-top: 100px;">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 105px; margin-top: 80px;">
             <h2 class="font-weight-semi-bold text-uppercase mb-3"><?=$row['name']?></h2>
             <div class="d-inline-flex">
                 <p class="m-0"><a href="index.php">Trang chủ</a></p>
@@ -178,7 +183,7 @@
                     </div>
                     <small class="pt-1">(50 Đánh giá)</small>
                 </div>
-                <h3 class="font-weight-semi-bold mb-4"><?=$row['price']?> VNĐ</h3>
+                <h3 class="font-weight-semi-bold mb-4">Giá: <?=$row['price']?> VNĐ</h3>
                 <p class="mb-4"><?=$row['summary']?></p>
                 <!-- Mua -->
                 <div class="d-flex align-items-center mb-4 pt-2">
@@ -352,7 +357,8 @@
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h6 class="text-truncate mb-3"><?=$row2['name']?></h6>
                             <div class="d-flex justify-content-center">
-                                <h6><?=$row2['disscounted_price']?></h6><h6 class="text-muted ml-2"><del><?=$row2['price']?></del></h6>
+                                <h6>Giá: <?=$row2['price']?> VNĐ</h6>
+                                <!-- <h6 class="text-muted ml-2"><del> <?=$row2['price']?> VNĐ</del></h6> -->
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">

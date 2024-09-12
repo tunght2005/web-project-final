@@ -8,7 +8,7 @@ session_start();
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WEB-TRANH</title>
-        <link rel="stylesheet" href="assets/css/style-2.css">
+        <link rel="stylesheet" href="assets/css/style-3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body> 
@@ -47,7 +47,8 @@ session_start();
                         <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <!-- button -->
-                    <span><a href="#" class="button"><i class="fa-regular fa-address-card"></i>
+                    <span>
+                    <a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
                     <?php
                       $user = $_SESSION['user'];
                       echo $user['name'];
@@ -56,19 +57,19 @@ session_start();
                     <a href="index.cart.php" class="shoping">
                         <span>
                             <?php
-                            $cart = [];
-                            if(isset($_SESSION['cart'])) {
-                                $cart = $_SESSION['cart'];
-                            }
-                            $count = 0; //hien thi so luong san pham trong gio
-                            foreach ($cart as $item) {
-                                $count += $item['qty'];
-                            }
-                            // hien thi so luong
-                            echo $count;
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
                             ?>
                         </span>
-                        <i class="fa-solid fa-cart-shopping"></i> 
+                       <i class="fa-brands fa-shopify"></i> 
                     </a>
                 </div>
             </div>
@@ -176,6 +177,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div class="inner-price">
+                                Giá: 
                                 <?=$row['price']?> VND
                                 </div>
                             </div>

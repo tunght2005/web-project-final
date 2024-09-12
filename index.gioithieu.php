@@ -43,12 +43,11 @@ require_once("./db/conn.php");
                         </ul>
                      </nav>
                     <!-- seach -->
-                    <form action="#" class="inner-form">
-                        <input name="keyword" placeholder="Nhập từ khoá...">
-                        <button><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
+                    <form action="index.danhmuc.php" method="get" class="inner-form" onsubmit="return searchByEnter()">
+                        <input name="keyword" id="keyword" placeholder="Nhập từ khoá..." >
+                        <button id="search-button"><i class="fa-sharp-duotone fa-solid fa-magnifying-glass"></i></button>
                     </form>
-                    <!-- button -->
-                    <span><a href="#" class="button"><i class="fa-regular fa-address-card"></i>
+                    <span><a href="logout1.php" class="button"><i class="fa-regular fa-address-card"></i> 
                     <?php
                       $user = $_SESSION['user'];
                       echo $user['name'];
@@ -57,19 +56,19 @@ require_once("./db/conn.php");
                     <a href="index.cart.php" class="shoping">
                         <span>
                             <?php
-                            $cart = [];
-                            if(isset($_SESSION['cart'])) {
-                                $cart = $_SESSION['cart'];
-                            }
-                            $count = 0; //hien thi so luong san pham trong gio
-                            foreach ($cart as $item) {
-                                $count += $item['qty'];
-                            }
-                            // hien thi so luong
-                            echo $count;
+                                $cart = [];
+                                if(isset($_SESSION['cart'])) {
+                                    $cart = $_SESSION['cart'];
+                                }
+                                $count = 0; //hien thi so luong san pham trong gio
+                                foreach ($cart as $item) {
+                                    $count += $item['qty'];
+                                }
+                                // hien thi so luong
+                                echo $count;
                             ?>
                         </span>
-                        <i class="fa-solid fa-cart-shopping"></i> 
+                       <i class="fa-brands fa-shopify"></i> 
                     </a>
                 </div>
             </div>
@@ -77,6 +76,19 @@ require_once("./db/conn.php");
         <!-- End Header -->
         <!-- Làm ở đây -->
         <div class="introduction">
+            <div class="content-header">
+                <div class="col-h">
+                    Về Chùng Tôi
+                </div>
+                <div class="col-r">
+                    <i class="fa-solid fa-map"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-regular fa-envelope"></i> 
+                    <i class="fa-brands fa-facebook"></i> 
+                    <i class="fa-brands fa-telegram"></i> 
+                </div>
+            </div>
+            <hr>
             <p>
             Chào bạn đến với <b>Shop Tranh</b> , nơi chúng tôi mang đến những tác phẩm tranh độc đáo và tinh tế nhất để làm phong phú thêm
             không gian sống và làm việc của bạn. Chúng tôi tự hào là một trong những cửa hàng tranh hàng đầu, chuyên cung cấp các
@@ -100,9 +112,10 @@ require_once("./db/conn.php");
                         Nếu cần tư vấn rõ hơn hãy liên hệ: 
                     </div>
                     <br>
-                    <span>Số điện thoại:</span> 0999999999 <br>
-                    <span>Email:</span> tungtai@gmail.com <br>
-                    <span>Địa chỉ:</span>  Võ Oanh, P25, Q.Bình Thạnh, Tp Hồ Chí Minh.
+                    <i class="fa-solid fa-map"></i> Võ Oanh, P25, Q.Bình Thạnh, Tp Hồ Chí Minh <br>
+                    <i class="fa-regular fa-envelope"></i> tungtai@gamil.com <br>
+                    <i class="fa-brands fa-facebook"></i> https://www.facebook.com/? <br>
+                    <i class="fa-brands fa-telegram"></i> 099 999 9999 <br>
                 
         </div>
 

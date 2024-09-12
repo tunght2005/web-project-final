@@ -47,29 +47,34 @@ a{
 }
 
 .shoping{
-    display: flex;
-    flex-direction: column;
-    margin-right: -50px;
-    align-items: center;
-    color: var(--color-main);
-    gap: 10px;
+  margin-right: -70px;
+  color: var(--color-main);
+  position: relative;
 }
 
 .shoping i{
-    display: flex;
-    font-size: 35px;
-    color: rgb(201, 20, 20)
+  font-size: 40px;
+  color: rgb(241, 115, 115);
+  position: relative;
+  
+}
+.shoping span{
+font-size: 16px;
+right: 0;
+top: -7px;
+/* margin-left: 30px; */
+border: 1px solid rgb(32, 21, 21);
+color: rgb(221, 7, 11);
+position: absolute;
+background-color: rgb(255, 241, 214);
+z-index: 1;
+border-radius: 40%;
 }
 
-.shoping b{
-    display: flex;
-    font-size: 16px;
-}
 
 .shoping i:hover{
-    color: rgb(4, 187, 233);
+  color: rgb(4, 187, 233);
 }
-
 .header {
     padding: 8px 0;
     /* padding: 12px 10.1%; */
@@ -189,7 +194,7 @@ a{
 }
 .col-back .contact-1 .contact-2{
   margin-top: -450px;
-  margin-left: 520px;
+  margin-left: 405px;
   text-align: center;
   position: absolute;
 }

@@ -47,27 +47,33 @@ a{
 }
 
 .shoping{
-    display: flex;
-    flex-direction: column;
-    margin-right: -50px;
-    align-items: center;
-    color: var(--color-main);
-    gap: 10px;
+  margin-right: -70px;
+  color: var(--color-main);
+  position: relative;
 }
 
 .shoping i{
-    display: flex;
-    font-size: 35px;
-    color: rgb(201, 20, 20)
+  font-size: 40px;
+  color: rgb(241, 115, 115);
+  position: relative;
+  
+}
+.shoping span{
+font-size: 16px;
+right: 0;
+top: -7px;
+/* margin-left: 30px; */
+border: 1px solid rgb(32, 21, 21);
+color: rgb(221, 7, 11);
+position: absolute;
+background-color: rgb(255, 241, 214);
+z-index: 1;
+border-radius: 40%;
 }
 
-.shoping b{
-    display: flex;
-    font-size: 16px;
-}
 
 .shoping i:hover{
-    color: rgb(4, 187, 233);
+  color: rgb(4, 187, 233);
 }
 
 .header {
@@ -450,3 +456,134 @@ a{
     color: var(--color-text-light);
   }
 
+
+/* DANH MUC */
+
+.inner-category, .inner-main-category{
+  padding-top: 120px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+/* Main Category */
+.inner-main-category {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* category */
+.col-large-1 {
+  width: 25%;
+  padding-right: 20px;
+}
+/* gạch chân */
+.inner-category .inner-wrap{
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+
+.inner-category .inner-content{
+  font-weight: 700;
+  font-size: 20px;
+  font-family: var(--font);
+  color: var(--color-main);
+}
+
+.inner-arrange-right{
+  font-weight: 700;
+  font-size: 15px;
+  font-family: var(--font);
+  color: var(--color-text-dark);
+  text-align: center;
+  float: right;
+}
+
+.inner-category-sub {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: var(--font);
+  color: var(--color-main);
+}
+.section-cate-2 .col-1,
+.section-cate-1 .col-1{
+  font-weight: 500;
+  font-size: 15px;
+  font-family: var(--font);
+  color: var(--color-text-dark);
+  text-align: center;
+}
+
+.section-cate-1,
+.section-cate-2 {
+  margin-bottom: 20px;
+}
+
+.section-cate-1 span,
+.section-cate-2 span {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.inner-arrange-right {
+  width: 200px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+select.col-1 {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+/* Product Items */
+.col-large-2 {
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.col-large-2 .inner-wrap{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Hiển thị 4 cột */
+  gap: 20px; /* Khoảng cách giữa các phần tử */
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .inner-main-category {
+      flex-direction: column;
+  }
+  .col-large-1,
+  .col-large-2 {
+      width: 100%;
+  }
+  .section-2 {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.inner-image img {
+  width: 100%;
+  height: auto; 
+  max-width: 200px; 
+  margin: 0 auto;
+}
+
+.product-item {
+  text-align: center; 
+  padding: 10px;
+  display: block;
+}
+
+.inner-content {
+  margin-top: 10px; 
+}
+/* end */
