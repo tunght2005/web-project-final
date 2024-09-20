@@ -88,7 +88,7 @@ $result_orders = mysqli_query($conn, $sql_orders);
                   <a class="dropdown-item" href="#">Cài Đặt</a>
                   <a class="dropdown-item" href="#">Nhật ký</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Đăng Xuất</a>
+                  <a class="dropdown-item" href="logout1.php" data-toggle="modal" data-target="#logoutModal">Đăng Xuất</a>
                 </div>
               </li>
             </ul>
@@ -149,5 +149,6 @@ $result_orders = mysqli_query($conn, $sql_orders);
     </div>
     <script src="admin/vendor/jquery/jquery.min.js"></script>
     <script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>

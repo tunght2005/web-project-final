@@ -82,7 +82,7 @@ require_once("./db/conn.php");
         <div class="introduction">
             <div class="content-header">
                 <div class="col-h">
-                    Về Chùng Tôi
+                    Về Chúng Tôi
                 </div>
                 <div class="col-r">
                     <i class="fa-solid fa-map"></i>
